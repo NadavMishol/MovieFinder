@@ -15,3 +15,38 @@ Steps the program should follow:
 7.	The response will include the title of the movie, it’s rate a link to the IMDB page. 
 
 
+Pseudo-code:
+1. def MovieFinder(type = 'movie',
+                    averageRating  = 7.5,
+                    MinNumVotes  = 1000,
+                    releaseMin = 2014,
+                    releasMax = 2024,
+                    MinRuntime = 90,
+                    actor = any,
+                    isAdult = 0,
+                    original = 0,
+                    genres = 'all',
+                    orderBy = 'rating')
+
+2.  Download title.basics.tsv.gz
+3.  def filter type
+4.  def filter averageRating
+5.  def filter releaseMax
+6.  def filter actor
+7.  def filter isAdult
+8.  def filter original
+9.  def filter genres
+10. def filter minRuntime
+
+
+3.  for parameter in parameters:
+        if filter: 
+            filter
+
+4. if orderBy:
+    sort()
+
+5. def print_title:
+    based on title ID
+6. for title 1:10:
+    print(title)
