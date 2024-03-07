@@ -11,18 +11,18 @@ import os
 
 
 
-def download_file(output_file):
-    url = 'https://datasets.imdbws.com/'+output_file+'.tsv.gz'
+def download_file(name):
+    url = 'https://datasets.imdbws.com/'+name+'.tsv.gz'
     response = requests.get(url)
 
     if response.status_code == 200:
-        with open(output_file+'.tsv.gz', 'wb') as f:
+        with open(name+'.tsv.gz', 'wb') as f:
             f.write(response.content)
     else:
         print('Request failed with status code:', response.status_code)
 
-def open_file(output_file,cols_to_read = None):
-    file = output_file+'.tsv.gz'
+def open_file(name,cols_to_read = None):
+    file = name+'.tsv.gz'
     with gzip.open(file, 'rt', encoding='utf-8') as gz_file:
         df = pd.read_csv(gz_file, delimiter='\t', na_values='\\N', usecols = cols_to_read)    
 

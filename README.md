@@ -1,52 +1,76 @@
 # MovieFinder- project proposal
 
-I will write a program script that does the following:
-1.	Download the most recent version of movies dataset from IMDB in this address:https://developer.imdb.com/non-commercial-datasets/
-2.	Filter the movies based on a set amount of parameters.
-3.	Print a list of relevant movies which answer the conditions set by the user
+MovieFinder is a python package which can be used to view and utilize the IMDB database. 
+IMDB hold information regarding titles from various media such as movies, tv, short videos etc. The package focuses only on movie titles. 
 
-Steps the program should follow:
-1.	Accept optional user-set conditions like: date, genre, participating actors, director, minimum rotten-tomatoes rate
-2.	Download the most recent version of the data
-3.	Unzip it
-4.	Filter the data according to the user preferences
-5.	Sort it according to the the user preferences
-6.	Generate a response of top X matches 
-7.	The response will include the title of the movie, it’s rate a link to the IMDB page. 
+In this repository you can find several files:
+1. MovieFinder.py - The package, containing all relevant tools for viewing and analyzing the database. 
+2. FindMovies.py - an example use of the FindMovies() function, the main tool of the package.
+3. Result.csv - the expected output of using the FindMovies.py script
+4. DataAnalysis.ipynb - a jupyter notebook with examples and use of the code, with basic analysis of movies.
 
 
-Pseudo-code:
-1. def MovieFinder(type = 'movie',
-                    averageRating  = 7.5,
-                    MinNumVotes  = 1000,
-                    releaseMin = 2014,
-                    releasMax = 2024,
-                    MinRuntime = 90,
-                    actor = any,
-                    isAdult = 0,
-                    original = 0,
-                    genres = 'all',
-                    orderBy = 'rating')
+## IMPORTANT!
+Since the IMDB dataset is too heavy to be saved in this repository, when first using theh packge one must set downloadIMDB to 'True'.
 
-2.  Download title.basics.tsv.gz
-3.  def filter type
-4.  def filter averageRating
-5.  def filter releaseMax
-6.  def filter actor
-7.  def filter isAdult
-8.  def filter original
-9.  def filter genres
-10. def filter minRuntime
+# Detailed description of the package:
+The general work flow of the package is as follows:
+1. Download the data ( must for first time use)
+2. Read the data zipped files
+3. Pre-process of the data
+4. Filtration of the data based on the user prefrences
+5. Sorting the data based on the user prefrences
+6. Printing the top hits (number selected by the user)
+7. saving the list of movies as a csv file
 
+## FindMovies function
+All these actions are combined and utilized by the the main function of the package called "FindMovies".
+The FindMovies function is designed to retrieve information about movies based on specified criteria. 
+The function takes various parameters to filter and customize the search, providing flexibility for users to narrow down their results. 
+Here's a summary of the key parameters:
+downloadIMDB: Boolean flag to enable/disable downloading IMDb data for the movies (default is True).
 
-3.  for parameter in parameters:
-        if filter: 
-            filter
+1.  maxyear: Filters movies released before this specified year (default is current year)
+2.  minyear: Filters movies released after this specified year (default is 1900)
+3.  genres: Filters movies based on specified genres (optional).
+4.  minVotes: Filters movies with a minimum number of votes (default is 0).
+5.  minRating: Filters movies with a minimum IMDb rating (default is 0).
+6.  maxRuntime: Filters movies with a runtime less than or equal to this value (default is 500 minutes).
+7.  verbose: Boolean flag to enable/disable verbose mode for additional output (default is False).
+8.  sortBy: Specifies the sorting criteria for the results (default is by start year, number of votes, and average rating).
+9.  director: Specifies the director name ID to filter movies (optional).
+10. English: Boolean flag to filter only English-language movies (default is True).
+11. TopX: Specifies the maximum number of top movies to retrieve (default is 10).
+12. blockbuster: Boolean flag to filter only blockbuster movies (default is False).
 
-4. if orderBy:
-    sort()
+Notes:
+The directors name must be spelled correctly with capitalization. For example: 'Steven Spielberg'
+The genres parameter accepts the following strings: 'Drama', 'Crime', 'Action', 'Adventure',
+'Biography', 'History', 'Sci-Fi', 'Romance', 'Fantasy', 'Mystery', 'Thriller', 'War', 'Family',
+'Animation', 'Western', 'Comedy', 'Music', 'Horror', 'Film-Noir', 'Musical', 'Sport', 'Documentary'
 
-5. def print_title:
-    based on title ID
-6. for title 1:10:
-    print(title)
+## Other functions:
+download_file(outp)
+
+download_file(name):
+download the relevant files from IMDB and saves them gz compressed in the same folder. 
+
+open_file(name):
+Reads the compressed files. 
+
+preprcosData(titles, ratings, crew):
+combines the different datasets and performs basic preprocessing. 
+
+filtertitles(titles, maxyear= None,minyear= float(1900),  maxRuntime= float(300),
+            genre = None, minVotes = float(0), minRating= float(0),
+             English = True, verbose = False):
+#enables the filtraion of the dataset based on user prefrences. 
+
+get_director_ID(csv_file, director):
+searches for the director IMDB ID based on the name set by the user. 
+
+filterDirector(titles, directorID):
+filters the data to keep only titles of a specific director
+
+printMovies(titles, TopX = 10):
+prints a selected number of titles from the top of the list. 
