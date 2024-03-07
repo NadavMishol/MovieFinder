@@ -1,0 +1,28 @@
+tconst,titleType,primaryTitle,originalTitle,startYear,runtimeMinutes,genres,averageRating,numVotes,directors
+tt1375666,movie,Inception,Inception,2010,148.0,"Action,Adventure,Sci-Fi",8.8,2529086,nm0634240
+tt0816692,movie,Interstellar,Interstellar,2014,169.0,"Adventure,Drama,Sci-Fi",8.7,2069799,nm0634240
+tt0133093,movie,The Matrix,The Matrix,1999,136.0,"Action,Sci-Fi",8.7,2036553,"nm0905154,nm0905152"
+tt0103064,movie,Terminator 2: Judgment Day,Terminator 2: Judgment Day,1991,137.0,"Action,Sci-Fi",8.6,1166365,nm0000116
+tt0482571,movie,The Prestige,The Prestige,2006,130.0,"Drama,Mystery,Sci-Fi",8.5,1429878,nm0634240
+tt0088763,movie,Back to the Future,Back to the Future,1985,116.0,"Adventure,Comedy,Sci-Fi",8.5,1296711,nm0000709
+tt0078748,movie,Alien,Alien,1979,117.0,"Horror,Sci-Fi",8.5,942838,nm0000631
+tt4154756,movie,Avengers: Infinity War,Avengers: Infinity War,2018,149.0,"Action,Adventure,Sci-Fi",8.4,1190652,"nm0751577,nm0751648"
+tt0090605,movie,Aliens,Aliens,1986,137.0,"Action,Adventure,Sci-Fi",8.4,757942,nm0000116
+tt0338013,movie,Eternal Sunshine of the Spotless Mind,Eternal Sunshine of the Spotless Mind,2004,108.0,"Drama,Romance,Sci-Fi",8.3,1070045,nm0327273
+tt0066921,movie,A Clockwork Orange,A Clockwork Orange,1971,136.0,"Crime,Sci-Fi",8.3,876418,nm0000040
+tt0062622,movie,2001: A Space Odyssey,2001: A Space Odyssey,1968,149.0,"Adventure,Sci-Fi",8.3,714495,nm0000040
+tt0017136,movie,Metropolis,Metropolis,1927,153.0,"Drama,Sci-Fi",8.3,184390,nm0000485
+tt0434409,movie,V for Vendetta,V for Vendetta,2005,132.0,"Action,Drama,Sci-Fi",8.2,1173830,nm0574625
+tt0107290,movie,Jurassic Park,Jurassic Park,1993,127.0,"Action,Adventure,Sci-Fi",8.2,1059136,nm0000229
+tt0084787,movie,The Thing,The Thing,1982,109.0,"Horror,Mystery,Sci-Fi",8.2,462809,nm0000118
+tt1392190,movie,Mad Max: Fury Road,Mad Max: Fury Road,2015,120.0,"Action,Adventure,Sci-Fi",8.1,1076482,nm0004306
+tt0088247,movie,The Terminator,The Terminator,1984,107.0,"Action,Sci-Fi",8.1,918137,nm0000116
+tt3315342,movie,Logan,Logan,2017,137.0,"Action,Drama,Sci-Fi",8.1,824055,nm0003506
+tt0083658,movie,Blade Runner,Blade Runner,1982,117.0,"Action,Drama,Sci-Fi",8.1,817544,nm0000631
+tt2338151,movie,PK,PK,2014,153.0,"Comedy,Drama,Sci-Fi",8.1,200258,nm0386246
+tt0079944,movie,Stalker,Stalker,1979,162.0,"Drama,Sci-Fi",8.1,143678,nm0001789
+tt0848228,movie,The Avengers,The Avengers,2012,143.0,"Action,Sci-Fi",8.0,1452824,nm0923736
+tt3659388,movie,The Martian,The Martian,2015,144.0,"Adventure,Drama,Sci-Fi",8.0,915986,nm0000631
+tt0246578,movie,Donnie Darko,Donnie Darko,2001,113.0,"Drama,Mystery,Sci-Fi",8.0,845260,nm0446819
+tt1798709,movie,Her,Her,2013,126.0,"Drama,Romance,Sci-Fi",8.0,664926,nm0005069
+tt0063442,movie,Planet of the Apes,Planet of the Apes,1968,112.0,"Adventure,Sci-Fi",8.0,191608,nm0769874

@@ -161,7 +161,8 @@ def FindMovies(
                 minVotes = float(0),
                 minRating= float(0),
                 English = True,
-                sortBy = ['startYear', 'numVotes', 'averageRating'],
+                sortBy = ['averageRating','numVotes','startYear'],
+                sortAscending = [False, False, True], 
                 TopX = 10,
                 downloadIMDB = True,
                 verbose = False,
@@ -170,7 +171,7 @@ def FindMovies(
 
     #Download the data from IMDB
     if downloadIMDB:
-        for file in ['title.basics', 'title.ratings', 'name.basics', 'title.crew']:
+        for file in ['title.basics', 'title.ratings', 'title.crew', 'name.basics']:
             print('Downloading', file, 'from IMDB...')
             download_file(file)
     else:
@@ -202,17 +203,18 @@ def FindMovies(
         titles = filterDirector(titles, directorID)
 
     #Sort the data
-    titles = titles.sort_values(by=sortBy, ascending = [False, False, True])
+    titles = titles.sort_values(by=sortBy, ascending = sortAscending)
+
+    #save resuls as csv
+    titles.to_csv('Movies.csv', index=False)
+
 
     #return the top X movies
     results = titles.head(TopX)
 
     #print results
-    print('Best movies:')
-    for row in results.iterrows():
-        print(row[1]['primaryTitle'], row[1]['startYear'], row[1]['averageRating'], row[1]['numVotes'])
+    printMovies(titles, TopX = TopX)
 
-    #save resuls as csv
-    results.to_csv('Movies.csv', index=False)
+
     return results
          

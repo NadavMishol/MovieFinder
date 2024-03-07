@@ -1,6 +1,7 @@
 # MovieFinder- project proposal
 
 MovieFinder is a python package which can be used to view and utilize the IMDB database. 
+
 IMDB hold information regarding titles from various media such as movies, tv, short videos etc. The package focuses only on movie titles. 
 
 In this repository you can find several files:
@@ -25,9 +26,13 @@ The general work flow of the package is as follows:
 
 ## FindMovies function
 All these actions are combined and utilized by the the main function of the package called "FindMovies".
+
 The FindMovies function is designed to retrieve information about movies based on specified criteria. 
+
 The function takes various parameters to filter and customize the search, providing flexibility for users to narrow down their results. 
+
 Here's a summary of the key parameters:
+
 downloadIMDB: Boolean flag to enable/disable downloading IMDb data for the movies (default is True).
 
 1.  maxyear: Filters movies released before this specified year (default is current year)
@@ -37,7 +42,8 @@ downloadIMDB: Boolean flag to enable/disable downloading IMDb data for the movie
 5.  minRating: Filters movies with a minimum IMDb rating (default is 0).
 6.  maxRuntime: Filters movies with a runtime less than or equal to this value (default is 500 minutes).
 7.  verbose: Boolean flag to enable/disable verbose mode for additional output (default is False).
-8.  sortBy: Specifies the sorting criteria for the results (default is by start year, number of votes, and average rating).
+8.  sortBy: Vector which specifies the sorting criteria for the results (default is by start year, number of votes, and average rating).
+9.  sortAscending: Boolean vector which specifies whether the sorting would be in ascending or descending order (True for ascending, False for descending)
 9.  director: Specifies the director name ID to filter movies (optional).
 10. English: Boolean flag to filter only English-language movies (default is True).
 11. TopX: Specifies the maximum number of top movies to retrieve (default is 10).
@@ -45,6 +51,7 @@ downloadIMDB: Boolean flag to enable/disable downloading IMDb data for the movie
 
 Notes:
 The directors name must be spelled correctly with capitalization. For example: 'Steven Spielberg'
+
 The genres parameter accepts the following strings: 'Drama', 'Crime', 'Action', 'Adventure',
 'Biography', 'History', 'Sci-Fi', 'Romance', 'Fantasy', 'Mystery', 'Thriller', 'War', 'Family',
 'Animation', 'Western', 'Comedy', 'Music', 'Horror', 'Film-Noir', 'Musical', 'Sport', 'Documentary'
