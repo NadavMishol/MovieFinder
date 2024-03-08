@@ -12,7 +12,7 @@ In this repository you can find several files:
 
 
 ## IMPORTANT!
-Since the IMDB dataset is too heavy to be saved in this repository, when first using theh packge one must set downloadIMDB to 'True'.
+Since the IMDB dataset is too heavy to be saved in this repository, the user must set downloadIMDB to 'True' in the first run.
 
 # Detailed description of the package:
 The general work flow of the package is as follows:
@@ -33,21 +33,20 @@ The function takes various parameters to filter and customize the search, provid
 
 Here's a summary of the key parameters:
 
-downloadIMDB: Boolean flag to enable/disable downloading IMDb data for the movies (default is True).
-
-1.  maxyear: Filters movies released before this specified year (default is current year)
-2.  minyear: Filters movies released after this specified year (default is 1900)
-3.  genres: Filters movies based on specified genres (optional).
-4.  minVotes: Filters movies with a minimum number of votes (default is 0).
-5.  minRating: Filters movies with a minimum IMDb rating (default is 0).
-6.  maxRuntime: Filters movies with a runtime less than or equal to this value (default is 500 minutes).
-7.  verbose: Boolean flag to enable/disable verbose mode for additional output (default is False).
-8.  sortBy: Vector which specifies the sorting criteria for the results (default is by start year, number of votes, and average rating).
-9.  sortAscending: Boolean vector which specifies whether the sorting would be in ascending or descending order (True for ascending, False for descending)
-9.  director: Specifies the director name ID to filter movies (optional).
-10. English: Boolean flag to filter only English-language movies (default is True).
-11. TopX: Specifies the maximum number of top movies to retrieve (default is 10).
-12. blockbuster: Boolean flag to filter only blockbuster movies (default is False).
+1. downloadIMDB: Boolean flag to enable/disable downloading IMDb data for the movies (default is True).
+2.  maxyear: Filters movies released before this specified year (default is current year)
+3.  minyear: Filters movies released after this specified year (default is 1900)
+4.  genres: Filters movies based on specified genres (optional).
+5.  minVotes: Filters movies with a minimum number of votes (default is 0).
+6.  minRating: Filters movies with a minimum IMDb rating (default is 0).
+7.  maxRuntime: Filters movies with a runtime less than or equal to this value (default is 500 minutes).
+8.  verbose: Boolean flag to enable/disable verbose mode for additional output (default is False).
+9.  sortBy: Vector which specifies the sorting criteria for the results (default is by start year, number of votes, and average rating).
+10. sortAscending: Boolean vector which specifies whether the sorting would be in ascending or descending order (True for ascending, False for descending)
+11. director: Specifies the director name ID to filter movies (optional).
+12. English: Boolean flag to filter only English-language movies (default is True).
+13. TopX: Specifies the maximum number of top movies to retrieve (default is 10).
+14. blockbuster: Boolean flag to filter only blockbuster movies (default is False).
 
 Notes:
 The directors name must be spelled correctly with capitalization. For example: 'Steven Spielberg'
