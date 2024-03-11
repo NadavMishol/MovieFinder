@@ -118,7 +118,7 @@ def get_director_ID(csv_file, director):
     chunk_size = 10000
     for chunk in pd.read_csv(csv_file, chunksize=chunk_size, delimiter='\t', usecols=['nconst', 'primaryName'], na_values='\\N'):
         # Search within the chunk
-        subset = chunk[chunk['primaryName'] == director]
+        subset = chunk[chunk['primaryName'].str.lower() == director.lower()]
         if not subset.empty:
             # Return the 'nconst' value from the first matching row found
             return subset['nconst'].iloc[0]
